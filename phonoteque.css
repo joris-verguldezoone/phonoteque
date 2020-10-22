@@ -23,6 +23,11 @@ header h1 {
     display: flex;
     align-items: center;
 }
+#titre_accueil {
+    display: flex;
+    align-items: center;
+    font-family: 'Mermaid1001';
+
 
 .header_nav ul {
     list-style-type: none;
@@ -37,6 +42,7 @@ header h1 {
     text-decoration: none;
     color: black;
     padding: 5px 0px;
+    padding: 20px 0px;
 }
 
 nav a:hover {
@@ -64,15 +70,15 @@ nav>ul li:hover .sous {
     padding-top: 10px;
 }
 
-.sous>li:nth-child(4) {
+.sous>li:nth-child(5) {
     font-weight: bold;
 }
 
-.sous>li:nth-child(7) {
+.sous>li:nth-child(8) {
     font-weight: bold;
 }
 
-.sous>li:nth-child(9) {
+.sous>li:nth-child(10) {
     font-weight: bold;
 }
 
@@ -127,6 +133,7 @@ li {
     position: relative;
     padding-top: 75%;
     perspective: 100px;
+ margin-top: 12%;
 
 }
 
@@ -252,7 +259,8 @@ h1.titre_presentation {
     margin-bottom: 10px;
 }
 
-#a_carousel {
+
+.a_carousel {
     text-decoration: none;
     color: white;
 }
@@ -282,7 +290,7 @@ h1.titre_presentation {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: darkkhaki;
+    background-color: #b85a36;
     height: 15vh;
 }
 
@@ -316,6 +324,19 @@ h1.titre_presentation {
 }
 
 /*FONT*/
+.signature {
+    font-family: 'Zenzai-Itacha.ttf';
+    font-size: 30px;
+}
+@font-face {
+    font-family: 'Mermaid1001';
+    src: url(font/Mermaid1001.ttf);
+}
+
+@font-face {
+    font-family: 'Zenzai-Itacha.ttf';
+    src: url(font/Zenzai-Itacha.ttf);
+}
 @font-face {
     font-family: 'reseaux';
     src: url('font/reseaux/Social_Shapes.ttf');
@@ -345,6 +366,7 @@ h1.titre_presentation {
 }
 
 
+
 /*début style0 HWU*/
 
 #header_style {
@@ -353,6 +375,7 @@ h1.titre_presentation {
     display: flex;
     flex-direction: row;
 }
+
 
 #main_style_HWU {
     background: no-repeat url('images/img_HWU.jpg');
@@ -441,6 +464,12 @@ h1.titre_presentation {
     font-family: 'hollywoodundead.otf';
 }
 
+
+.lien_HWU {
+    text-decoration: none;
+    color: white;
+
+
 .HWU {
     text-align: center;
     margin-top: 30px;
@@ -464,6 +493,8 @@ h1.titre_presentation {
 /*style1 knocked loose*/
 #h1_style1 {
     font-family: 'Roboto Mono', monospace;
+display: flex;
+    align-items: center;
 
 }
 
@@ -630,6 +661,12 @@ h1.titre_presentation {
     flex-direction: row;
 }
 
+.lien_txt {
+    text-decoration: none;
+    color: white;
+}
+
+
 .txt_p {
     margin: 4%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -751,6 +788,16 @@ h1.titre_presentation {
     justify-content: space-between;
 }
 
+#lien_id {
+    text-decoration: none;
+    color: white;
+}
+
+#lien_id:hover {
+    color: red;
+}
+
+
 .presentation_groupe_id {
     font-family: 'font_id_bold.ttf';
     text-align: center;
@@ -785,7 +832,18 @@ h1.titre_presentation {
 
 
 /*fin cindy*/
-
+h1_style{
+display: flex;
+    align-items: center;
+}
+h1_style2{
+display: flex;
+    align-items: center;
+}
+h1_style3{
+display: flex;
+    align-items: center;
+}
 
 /* music player */
 /*Style4 Carpenter Brut*/
@@ -799,6 +857,8 @@ h1.titre_presentation {
 #h1_style4 {
     font-family: 'carpenter';
     font-size: 40px;
+display: flex;
+    align-items: center;
 }
 
 /* HEADER */
@@ -869,8 +929,10 @@ h1.titre_presentation {
     flex-direction: row;
 }
 
-#header_style5 {
+#h1_style5 {
     font-family: 'Playfair Display SC', serif;
+display: flex;
+    align-items: center;
 
 }
 
@@ -1031,7 +1093,8 @@ h1.titre_presentation {
 
 #h1_style6 {
     font-family: 'Manuale', serif;
-
+display: flex;
+    align-items: center;
 }
 
 /*MAIN STYLE6*/
