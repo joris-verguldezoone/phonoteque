@@ -1,8 +1,1075 @@
+
 /*      POUR UNE MEILLEURE EXPERIENCE DE NOTRE PHONOTEQUE,
         IL EST PREFERABLE DE LANCER NOTRE PROJET SUR UN SERVEUR
         (ex: WAMP) AFIN QUE LES VIDEOS YOUTUBE PUISSE SE LIRE       
 */
 * {
+    margin: 0;
+}
+
+/*header page d'acceuil*/
+#header_accueil {
+    background-color: darkkhaki;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.header_nav {
+    width: 45%;
+
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+}
+
+.header_nav ul {
+    list-style-type: none;
+}
+
+.header_nav ul li {
+    width: 10vh;
+}
+
+.header_nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px 0px;
+}
+
+nav a:hover {
+    color: orange;
+    border-bottom: 2px solid green;
+}
+
+/*menu deroulant*/
+.sous {
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background: white;
+    position: absolute;
+    width: 11%;
+    z-index: 1000;
+}
+
+nav>ul li:hover .sous {
+    display: block;
+
+}
+
+.sous>li:nth-child(1) {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.sous>li:nth-child(4) {
+    font-weight: bold;
+}
+
+.sous>li:nth-child(7) {
+    font-weight: bold;
+}
+
+.sous>li:nth-child(9) {
+    font-weight: bold;
+}
+
+.sous a {
+    padding: 10px;
+    width: 20vh;
+}
+
+.sous a:hover {
+    border-bottom: none;
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+.deroulant>a::after {
+    content: url('images/header_icon.png');
+
+}
+
+/*MAIN  page d'acceuil Debut Cindy*/
+.main_accueil {
+    max-width: 37.5rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    height: 75vh;
+    padding-top: 4%;
+}
+
+.main_accueil ::-webkit-scrollbar {
+    width: 0;
+}
+
+.main_accueil ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main_accueil ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+
+}
+
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    padding-top: 75%;
+    perspective: 100px;
+
+}
+
+.carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    counter-increment: item;
+}
+
+.carousel__slide:before {
+    content: counter(item);
+    position: absolute;
+    transform: translate3d(-50%, -40%, 70px);
+    font-size: 2em;
+}
+
+.carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+
+.carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    left: 0;
+    text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+    display: inline-block;
+}
+
+.carousel__navigation-button {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #333;
+    opacity: 0.25;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 37.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+    left: -1rem;
+}
+
+.carousel::after,
+.carousel__next {
+    right: -1rem;
+}
+
+.carousel::before,
+.carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: #333;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+}
+
+.carousel::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.carousel::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 97%;
+    padding: 10px;
+}
+
+h1.titre_presentation {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.presentation_style_accueil {
+    text-align: justify;
+}
+
+.cate_groupe_pres {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+.cate_groupe_solo {
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+/*fin cindy*/
+
+/*FOOTER */
+#footer_phonoteque {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: darkkhaki;
+    height: 15vh;
+}
+
+.footer_article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.footer_div_column {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.footer_div_column:nth-child(1) {
+    margin-right: 10px;
+}
+
+.img_signature_dimension {
+    height: 50px;
+    width: 50px;
+}
+
+.footer_article a {
+    text-decoration: none;
+}
+
+/*FONT*/
+@font-face {
+    font-family: 'reseaux';
+    src: url('font/reseaux/Social_Shapes.ttf');
+}
+
+@font-face {
+    font-family: 'carpenter';
+    src: url('font/carpenter_brut/Synthetic\ Sharps.otf')
+}
+
+@font-face {
+    font-family: 'hollywoodundead.otf';
+    src: url('font/hollywoodundead.otf');
+}
+
+@font-face {
+    font-family: 'font_id_bold.ttf';
+    src: url('font/font_id_bold.ttf');
+}
+
+.reseaux {
+    font-family: 'reseaux';
+    font-size: 40px;
+    color: white;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
+
+
+/*début style0 HWU*/
+
+#header_style {
+    background-color: #83231f;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#main_style_HWU {
+    background: no-repeat url('images/img_HWU.jpg');
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+#article_style_HWU {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    width: 50%;
+    padding: 20px;
+    margin-top: 3%;
+    margin-left: 13.5%;
+    margin-bottom: 5%;
+}
+
+#flex_box_HWU {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 35px;
+}
+
+.album_musique_HWU {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 21px;
+}
+
+#bloc_presentation_HWU {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid white;
+    padding-bottom: 30px;
+}
+
+#album_V_HWU {
+    margin-right: 30px;
+    margin-top: 37px;
+    margin-left: 10px;
+}
+
+#legende_album {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#titre_presentation_HWU {
+    text-align: center;
+    font-family: 'hollywoodundead.otf';
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.HWU_p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 45px;
+}
+
+#presentation_groupe_HWU {
+    margin-top: 40px;
+    margin-left: 25%;
+}
+
+#presentation_personne_HWU {
+    margin-top: 10px;
+    margin-left: 16%;
+}
+
+#border_presentation {
+    border-bottom: 2px solid white;
+    padding-bottom: 30px;
+}
+
+.presentation_HWU {
+    font-size: 65px;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'hollywoodundead.otf';
+}
+
+.HWU {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.lien_HWU:hover {
+    color: #07e9ff;
+}
+
+#footer_style {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #83231f;
+    height: 15vh;
+}
+
+
+/*fin  style HWU*/
+
+/*style1 knocked loose*/
+#h1_style1 {
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+/*HEADER STYLE1*/
+#main_knocked {
+    background-color: #00705d;
+    background-repeat: url("images/brickwall.png");
+}
+
+#header_style1 {
+    background-color: #2c443f;
+    display: flex;
+    flex-direction: row;
+}
+
+.section_album {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 30vh;
+}
+
+#main_knocked :nth-child(1) .article_album {
+    padding-top: 10%;
+}
+
+#main_knocked :nth-child(2) .article_album {
+    padding-top: 4%;
+}
+
+.article_album {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img_dimension_album_knocked {
+    height: 100px;
+    width: 100px;
+}
+
+.section_principale {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article_principal {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.article_album {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.img_dimension_principale {
+    height: 400px;
+    width: 600px;
+}
+
+.knocked_section_texte {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    padding: 20px;
+}
+
+.section_basdepage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gif_dimension_mosh {
+    width: 70vh;
+    height: 40vh;
+}
+
+.knocked_p {
+    padding: 20px;
+    background-color: #CCC;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/*Footer style1*/
+
+#footer_style1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 15vh;
+    background-color: #2c443f;
+}
+
+/*Fin style1 knocked loose*/
+
+/*début style TxT*/
+
+#header_style2 {
+    background-color: gray;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#flex_titre_txt {
+    display: flex;
+    flex-direction: column;
+}
+
+#main_style_txt {
+    background: url(images/img_txt.jpg);
+    min-height: 100vh;
+    min-width: 100vh;
+    background-attachment: fixed;
+}
+
+.titre_presentation_txt_header {
+    text-align: center;
+}
+
+.titre_presentation_txt {
+    text-align: center;
+    padding-top: 23%;
+}
+
+#article_style_txt {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 3px solid #f1f1f1;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+.suite_article_style_txt {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 3px solid #f1f1f1;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+#bloc_presentation_txt {
+    display: flex;
+    flex-direction: row;
+}
+
+.txt_p {
+    margin: 4%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+.lien_txt:hover {
+    color: #60bbf0;
+}
+
+.img_bloc_txt {
+    margin: 4px;
+    margin-bottom: 0;
+}
+
+.suite_article_style_txt {
+    display: flex;
+    flex-direction: row;
+}
+
+#presentation_groupe_txt {
+    text-align: center;
+}
+
+.pers_txt {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#div_pres_groupe_txt {
+    margin-top: 6%;
+    margin-left: 15%;
+}
+
+.suite_article_style_txt:nth-child(2) {
+    justify-content: space-around;
+}
+
+.titre_music_txt {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+#footer_style2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: gray;
+    height: 15vh;
+}
+
+
+/*fin style txt*/
+
+
+/*début style imagine dragons*/
+
+#header_style3 {
+    background-color: #3f6cd7;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#main_style_id {
+    background: url(images/img_id.jpg);
+    min-height: 100vh;
+    min-width: 100vh;
+    background-attachment: fixed;
+}
+
+.bloc_opacity_id {
+    background-color: rgba(219, 218, 218, 0.3);
+    padding-bottom: 10px;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    padding-top: 3%;
+}
+
+#titre_ID {
+    font-family: 'font_id_bold.ttf';
+}
+
+.photo_id {
+    text-align: center;
+    margin-top: 7%;
+}
+
+.bloc_presentation_id {
+    padding-top: 1%;
+    margin-right: 2%;
+    margin-left: 1%;
+    width: 30%;
+}
+
+.paragraphe_id {
+    margin-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+    color: white;
+    font-size: 18px;
+    font-family: serif;
+    text-indent: 35px;
+    margin-top: 10px;
+}
+
+#footer_style3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #3f6cd7;
+    height: 15vh;
+}
+
+.flex_box_style_id {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.presentation_groupe_id {
+    font-family: 'font_id_bold.ttf';
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: honeydew;
+}
+
+.paragraphe_membre_id {
+    color: white;
+    font-family: serif;
+    font-size: 18px;
+    margin-left: 25px;
+    margin-right: 10px;
+    text-align: justify;
+}
+
+.dimension_pochette_id {
+    width: 66%;
+}
+
+.box_music_flex_id {
+    display: flex;
+    flex-direction: row;
+}
+
+audio {
+    margin-top: 27%;
+    padding-right: 20px;
+}
+
+
+/*fin cindy*/
+
+
+/* music player */
+/*Style4 Carpenter Brut*/
+#header_style4 {
+    background-color: #3D1D2A;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#h1_style4 {
+    font-family: 'carpenter';
+    font-size: 40px;
+}
+
+/* HEADER */
+#main_carpenter_brut {
+    background-image: url('images/background_carpenter.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.carpenter_aside_left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.carpenter_aside_left article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_album_carpenter_dimension {
+    width: 150px;
+    height: 135px;
+}
+
+.carpenter_centre {
+    width: 40%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.p_carpenter {
+    background-color: whitesmoke;
+    padding: 20px;
+    width: 75.5%;
+    margin-bottom: 2%;
+    font-family: 'carpenter';
+    font-size: 23px;
+}
+
+/*FOOTER STYLE4*/
+#footer_style4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 15vh;
+    background-color: #3D1D2A;
+}
+
+
+/*Fin Style4 carpenter*/
+/*Style5 suicide boys */
+/*header*/
+#header_style5 {
+    background-color: #872020;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#main_suicide_boys {
+    background-image: url('images/FTP_background.png');
+}
+
+#section_top_suicide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.article_top_music {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.article_p_top_suicide {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.p_suicide_boys {
+    padding: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: whitesmoke;
+    border-radius: 1em;
+    box-shadow: 5px 5px 5px black;
+}
+
+.bande_horizontale {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 150px;
+    background-color: #872020;
+}
+
+/*centre*/
+#section_centre_suicide {
+    width: 90%;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+}
+
+.article_photo {
+    width: 20%;
+    height: 90%;
+}
+
+.article_photo :nth-child(7) {
+    display: flex;
+    justify-content: center;
+    margin-left: 38.5px;
+}
+
+.gif_suicide_dimension {
+    height: 150px;
+    width: 250px;
+}
+
+#section_centre_suicide :nth-child(3) {
+    align-self: flex-end;
+    margin-bottom: 1.6%;
+
+}
+
+.article_texte {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 90%;
+}
+
+.p_suicide_boys_centre {
+    padding: 20px;
+    margin: 5%;
+    background-color: whitesmoke;
+    font-size: 22px;
+    width: 40%;
+    border-radius: 1em;
+    box-shadow: 5px 5px 5px black;
+}
+
+.audioplayer_suicide {
+    margin: 5%;
+}
+
+.p_description_suicide {
+    color: darkcyan;
+    font-weight: bold;
+
+}
+
+.article_bas_suicide {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    justify-content: space-around;
+}
+
+#p_center_suicide_amvtv {
+    text-align: center;
+    color: #CCC;
+    font-weight: bold;
+}
+
+
+/*FOOTER STYLE5*/
+#footer_style5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 15vh;
+    background-color: #872020;
+}
+
+/*FIN STYLE5*/
+/*STYLE6*/
+/*HEADER STYLE6*/
+#header_style6 {
+    background-color: #003800;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+/*MAIN STYLE6*/
+#main_style6 {
+    display: flex;
+    flex-direction: row;
+    background-color: #171f00;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+
+.img_dimension_princiale_style6 {
+    width: 400px;
+    height: 300px;
+    padding: 3%;
+
+}
+
+.section_principale_style6 {
+    width: 65%;
+    padding-left: 5%;
+}
+
+#aside_style6_right {
+    width: 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+#aside_style6_right2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    padding-right: 5%;
+    padding-left: 1%;
+
+}
+
+#aside_style6_right article {
+    padding: 3%;
+}
+
+#aside_style6_right p {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #003800;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.album_style6_dimension {
+    height: 100px;
+    width: 120px;
+    padding: 3%;
+}
+
+
+/*FOOTER STYLE6*/
+#footer_style6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 15vh;
+    background-color: #003800;
+}
+
+
+
+/*FIN STYLE6*/<<<<<<< .mine
     margin: 0;
 }
 
@@ -729,3 +1796,731 @@ a {
 
 
 /*FIN STYLE6*/
+=======
+/*header page d'acceuil*/
+
+#header_accueil {
+    background-color: darkkhaki;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.header_nav {
+    width: 45%;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+}
+
+.header_nav ul {
+    list-style-type: none;
+}
+
+.header_nav ul li {
+    width: 10vh;
+}
+
+.header_nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px 0px;
+}
+
+nav a:hover {
+    color: orange;
+    border-bottom: 2px solid green;
+}
+
+
+/*menu deroulant*/
+
+.sous {
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background: white;
+    position: absolute;
+    width: 11%;
+    z-index: 1000;
+}
+
+nav>ul li:hover .sous {
+    display: block;
+}
+
+.sous>li:nth-child(1) {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.sous>li:nth-child(4) {
+    font-weight: bold;
+}
+
+.sous>li:nth-child(7) {
+    font-weight: bold;
+}
+
+.sous>li:nth-child(9) {
+    font-weight: bold;
+}
+
+.sous a {
+    padding: 10px;
+    width: 20vh;
+}
+
+.sous a:hover {
+    border-bottom: none;
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+.deroulant>a::after {
+    content: url('images/header_icon.png');
+}
+
+
+/*MAIN  page d'acceuil Debut Cindy*/
+
+.main_accueil {
+    max-width: 37.5rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    height: 75vh;
+    padding-top: 4%;
+}
+
+.main_accueil ::-webkit-scrollbar {
+    width: 0;
+}
+
+.main_accueil ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main_accueil ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    padding-top: 75%;
+    perspective: 100px;
+}
+
+.carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    counter-increment: item;
+}
+
+.carousel__slide:before {
+    content: counter(item);
+    position: absolute;
+    transform: translate3d(-50%, -40%, 70px);
+    font-size: 2em;
+}
+
+.carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+
+.carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    left: 0;
+    text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+    display: inline-block;
+}
+
+.carousel__navigation-button {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #333;
+    opacity: 0.25;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 37.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+    left: -1rem;
+}
+
+.carousel::after,
+.carousel__next {
+    right: -1rem;
+}
+
+.carousel::before,
+.carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: #333;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+}
+
+.carousel::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.carousel::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 97%;
+    padding: 10px;
+}
+
+h1.titre_presentation {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.presentation_style_accueil {
+    text-align: justify;
+}
+
+.cate_groupe_pres {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+.cate_groupe_solo {
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+
+/*début style HWU*/
+
+#header_style {
+    background-color: #83231f;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#main_style_HWU {
+    background: no-repeat url('images/img_HWU.jpg');
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+#article_style_HWU {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    width: 50%;
+    padding: 20px;
+    margin-top: 3%;
+    margin-left: 13.5%;
+    margin-bottom: 5%;
+}
+
+#flex_box_HWU {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 35px;
+}
+
+.album_musique_HWU {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 21px;
+}
+
+#bloc_presentation_HWU {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid white;
+    padding-bottom: 30px;
+}
+
+#album_V_HWU {
+    margin-right: 30px;
+    margin-top: 37px;
+    margin-left: 10px;
+}
+
+#legende_album {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#titre_presentation_HWU {
+    text-align: center;
+    font-family: 'hollywoodundead.otf';
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.HWU_p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 45px;
+}
+
+#presentation_groupe_HWU {
+    margin-top: 40px;
+    margin-left: 25%;
+}
+
+#presentation_personne_HWU {
+    margin-top: 10px;
+    margin-left: 16%;
+}
+
+#border_presentation {
+    border-bottom: 2px solid white;
+    padding-bottom: 30px;
+}
+
+.presentation_HWU {
+    font-size: 65px;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'hollywoodundead.otf';
+}
+
+.HWU {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.lien_HWU:hover {
+    color: #07e9ff;
+}
+
+#footer_style {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #83231f;
+    height: 15vh;
+}
+
+
+/*fin  style HWU*/
+
+
+/*début style TxT*/
+
+#header_style2 {
+    background-color: gray;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#flex_titre_txt {
+    display: flex;
+    flex-direction: column;
+}
+
+#main_style_txt {
+    background: url(images/img_txt.jpg);
+    min-height: 100vh;
+    min-width: 100vh;
+    background-attachment: fixed;
+}
+
+.titre_presentation_txt_header {
+    text-align: center;
+}
+
+.titre_presentation_txt {
+    text-align: center;
+    padding-top: 23%;
+}
+
+#article_style_txt {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 3px solid #f1f1f1;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+.suite_article_style_txt {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 3px solid #f1f1f1;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+#bloc_presentation_txt {
+    display: flex;
+    flex-direction: row;
+}
+
+.txt_p {
+    margin: 4%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+.lien_txt:hover {
+    color: #60bbf0;
+}
+
+.img_bloc_txt {
+    margin: 4px;
+    margin-bottom: 0;
+}
+
+.suite_article_style_txt {
+    display: flex;
+    flex-direction: row;
+}
+
+#presentation_groupe_txt {
+    text-align: center;
+}
+
+.pers_txt {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#div_pres_groupe_txt {
+    margin-top: 6%;
+    margin-left: 15%;
+}
+
+.suite_article_style_txt:nth-child(2) {
+    justify-content: space-around;
+}
+
+.titre_music_txt {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+#footer_style2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: gray;
+    height: 15vh;
+}
+
+
+/*fin style txt*/
+
+
+/*début style imagine dragons*/
+
+#header_style3 {
+    background-color: #3f6cd7;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#main_style_id {
+    background: url(images/img_id.jpg);
+    min-height: 100vh;
+    min-width: 100vh;
+    background-attachment: fixed;
+}
+
+.bloc_opacity_id {
+    background-color: rgba(219, 218, 218, 0.3);
+    padding-bottom: 10px;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    padding-top: 3%;
+}
+
+#titre_ID {
+    font-family: 'font_id_bold.ttf';
+}
+
+.photo_id {
+    text-align: center;
+    margin-top: 7%;
+}
+
+.bloc_presentation_id {
+    padding-top: 1%;
+    margin-right: 2%;
+    margin-left: 1%;
+    width: 30%;
+}
+
+.paragraphe_id {
+    margin-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+    color: white;
+    font-size: 18px;
+    font-family: serif;
+    text-indent: 35px;
+    margin-top: 10px;
+}
+
+#footer_style3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #3f6cd7;
+    height: 15vh;
+}
+
+.flex_box_style_id {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.presentation_groupe_id {
+    font-family: 'font_id_bold.ttf';
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: honeydew;
+}
+
+.paragraphe_membre_id {
+    color: white;
+    font-family: serif;
+    font-size: 18px;
+    margin-left: 25px;
+    margin-right: 10px;
+    text-align: justify;
+}
+
+.dimension_pochette_id {
+    width: 66%;
+}
+
+.box_music_flex_id {
+    display: flex;
+    flex-direction: row;
+}
+
+audio {
+    margin-top: 27%;
+    padding-right: 20px;
+}
+
+
+/*fin cindy*/
+
+
+/*FOOTER */
+
+#footer_accueil {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: darkkhaki;
+    height: 15vh;
+}
+
+.footer_article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer_div_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_div_column:nth-child(1) {
+    margin-right: 10px;
+}
+
+.img_signature_dimension {
+    height: 50px;
+    width: 50px;
+}
+
+.footer_article a {
+    text-decoration: none;
+}
+
+
+/*FONT*/
+
+@font-face {
+    font-family: 'reseaux';
+    src: url('font/reseaux/Social_Shapes.ttf');
+}
+
+@font-face {
+    font-family: 'hollywoodundead.otf';
+    src: url('font/hollywoodundead.otf');
+}
+
+@font-face {
+    font-family: 'font_id_bold.ttf';
+    src: url('font/font_id_bold.ttf');
+}
+
+.reseaux {
+    font-family: 'reseaux';
+    font-size: 40px;
+    color: white;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> .theirs
