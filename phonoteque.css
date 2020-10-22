@@ -1,4 +1,3 @@
-
 /*      POUR UNE MEILLEURE EXPERIENCE DE NOTRE PHONOTEQUE,
         IL EST PREFERABLE DE LANCER NOTRE PROJET SUR UN SERVEUR
         (ex: WAMP) AFIN QUE LES VIDEOS YOUTUBE PUISSE SE LIRE       
@@ -253,7 +252,7 @@ h1.titre_presentation {
     margin-bottom: 10px;
 }
 
-a {
+#a_carousel {
     text-decoration: none;
     color: white;
 }
@@ -870,6 +869,11 @@ a {
     flex-direction: row;
 }
 
+#header_style5 {
+    font-family: 'Playfair Display SC', serif;
+
+}
+
 #main_suicide_boys {
     background-image: url('images/FTP_background.png');
 }
@@ -890,6 +894,14 @@ a {
     width: 80%;
     display: flex;
     flex-direction: row;
+    padding: 50px;
+    justify-content: space-around;
+
+}
+
+.a_style5_decoration_none {
+    text-decoration: none;
+    color: blue;
 }
 
 .p_suicide_boys {
@@ -899,9 +911,19 @@ a {
     background-color: whitesmoke;
     border-radius: 1em;
     box-shadow: 5px 5px 5px black;
+    font-family: 'Playfair Display SC', serif;
+
 }
 
-.bande_horizontale {
+#bande_horizontale1 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 150px;
+    background-color: #872020;
+}
+
+#bande_horizontale2 {
     margin-top: 2%;
     margin-bottom: 2%;
     width: 100%;
@@ -954,7 +976,10 @@ a {
     font-size: 22px;
     width: 40%;
     border-radius: 1em;
+    height: 80%;
     box-shadow: 5px 5px 5px black;
+    font-family: 'Playfair Display SC', serif;
+
 }
 
 .audioplayer_suicide {
@@ -964,6 +989,8 @@ a {
 .p_description_suicide {
     color: darkcyan;
     font-weight: bold;
+    font-family: 'Playfair Display SC', serif;
+
 
 }
 
@@ -978,6 +1005,8 @@ a {
     text-align: center;
     color: #CCC;
     font-weight: bold;
+    font-family: 'Playfair Display SC', serif;
+
 }
 
 
@@ -1000,12 +1029,39 @@ a {
     flex-direction: row;
 }
 
+#h1_style6 {
+    font-family: 'Manuale', serif;
+
+}
+
 /*MAIN STYLE6*/
 #main_style6 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #171f00;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+#section_style6_contenu_principal {
+    display: flex;
+    flex-direction: row;
+}
+
+#description_style6_punish {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.p_punish_description {
+    color: black;
+    padding: 20px;
+    background-color: #003800;
+    margin: 20px;
+    border-radius: 1em;
+    width: 30%;
+    font-family: 'Habibi', serif;
+
 }
 
 
@@ -1066,4 +1122,5 @@ a {
     height: 15vh;
     background-color: #003800;
 }
+
 /*FIN STYLE6*/
