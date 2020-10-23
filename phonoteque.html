@@ -7,7 +7,7 @@
     <title>Phonoteque</title>
 </head>
 
-<body>
+<body id='body_background_phonoteque'>
     <header id="header_accueil">
         <nav class="header_nav">
             <ul>
@@ -34,98 +34,120 @@
 
     </header>
     <main class="main_accueil">
-        <section class="carousel" aria-label="Music">
-            <ol class="carousel__viewport">
-                <li id="carousel__slide1" class="carousel__slide">
-                    <div class="carousel__snapper">
-                        <a href="#carousel__slide4" class="carousel__prev">Aller vers le slide précédent</a>
-                        <img src="images/metal.jpg" alt="metal" class="style_music">
+        <section class="carousel_section_globale">
+            <section class="carousel" aria-label="Music">
+                <ol class="carousel__viewport">
+                    <li id="carousel__slide1" class="carousel__slide">
+                        <div class="carousel__snapper">
+                            <a href="#carousel__slide4" class="carousel__prev">Aller vers le slide précédent</a>
+                            <img src="images/metal.jpg" alt="metal" class="style_music">
+                            <div class="content">
+                                <h1 class="titre_presentation">Metal</h1>
+                                <p class="presentation_style_accueil">Le heavy metal (ou simplement metal), parfois
+                                    retranscrit heavy métal en français, est un genre musical dérivé du rock apparu au
+                                    Royaume-Uni et aux États-Unis à la fin des années 1960. Cependant, le terme de «
+                                    heavy
+                                    metal »
+                                    est sujet à confusion car il peut prendre plusieurs sens différents selon le
+                                    contexte
+                                    dans lequel il est employé. Dans son contexte d'origine, il était indifféremment
+                                    utilisé
+                                    comme un synonyme de hard rock.</p>
+                                <article class="cate_groupe_pres">
+                                    <div>
+                                        <a href="style.html" target="_blank" class="a_carousel">Hollywood Undead</a>
+                                    </div>
+                                    <div>
+                                        <a href="style1.html" target="blank" class="a_carousel">Knocked Loose</a>
+                                    </div>
+                                    <div>
+                                        <a href="style6.html" target="_blank" class="a_carousel">Punish Yourself</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <a href="#carousel__slide2" class="carousel__next">Aller vers le slide suivant</a>
+                        </div>
+                    </li>
+                    <li id="carousel__slide2" class="carousel__slide">
+                        <div class="carousel__snapper"></div>
+                        <a href="#carousel__slide1" class="carousel__prev">Aller vers le slide précédent</a>
+                        <img src="images/pop.jpg" alt="pop" class="style_music">
                         <div class="content">
-                            <h1 class="titre_presentation">Metal</h1>
-                            <p class="presentation_style_accueil">Le heavy metal (ou simplement metal), parfois retranscrit heavy métal en français, est un genre musical dérivé du rock apparu au Royaume-Uni et aux États-Unis à la fin des années 1960. Cependant, le terme de « heavy metal »
-                                est sujet à confusion car il peut prendre plusieurs sens différents selon le contexte dans lequel il est employé. Dans son contexte d'origine, il était indifféremment utilisé comme un synonyme de hard rock.</p>
+                            <h1 class="titre_presentation">Pop</h1>
+                            <p class="presentation_style_accueil">La musique pop (ou simplement la pop) est un genre
+                                musical
+                                apparu dans les années 1960 au Royaume-Uni et aux États-Unis. Ces chansons parlent en
+                                général de l'amour ou des relations entre les femmes et les hommes. Elle met l'accent
+                                sur la chanson individuelle plutôt que sur l'album, et utilise essentiellement des
+                                chansons
+                                courtes avec des rythmes associés à la danse. </p>
                             <article class="cate_groupe_pres">
                                 <div>
-                                    <a href="style.html" target="_blank" class="a_carousel">Hollywood Undead</a>
+                                    <a href="style2.html" target="_blank" class="a_carousel">Tomorrow x Together</a>
                                 </div>
                                 <div>
-                                    <a href="style1.html" target="blank" class="a_carousel">Knocked Loose</a>
-                                </div>
-                                <div>
-                                    <a href="style6.html" target="_blank" class="a_carousel">Punish Yourself</a>
+                                    <a href="style3.html" target="blank" class="a_carousel">Imagine Dragons</a>
                                 </div>
                             </article>
                         </div>
-                        <a href="#carousel__slide2" class="carousel__next">Aller vers le slide suivant</a>
-                    </div>
-                </li>
-                <li id="carousel__slide2" class="carousel__slide">
-                    <div class="carousel__snapper"></div>
-                    <a href="#carousel__slide1" class="carousel__prev">Aller vers le slide précédent</a>
-                    <img src="images/pop.jpg" alt="pop" class="style_music">
-                    <div class="content">
-                        <h1 class="titre_presentation">Pop</h1>
-                        <p class="presentation_style_accueil">La musique pop (ou simplement la pop) est un genre musical apparu dans les années 1960 au Royaume-Uni et aux États-Unis. Ces chansons parlent en général de l'amour ou des relations entre les femmes et les hommes. Elle met l'accent
-                            sur la chanson individuelle plutôt que sur l'album, et utilise essentiellement des chansons courtes avec des rythmes associés à la danse. </p>
-                        <article class="cate_groupe_pres">
-                            <div>
-                                <a href="style2.html" target="_blank" class="a_carousel">Tomorrow x Together</a>
-                            </div>
-                            <div>
-                                <a href="style3.html" target="blank" class="a_carousel">Imagine Dragons</a>
-                            </div>
-                        </article>
-                    </div>
-                    <a href="#carousel__slide3" class="carousel__next">Aller vers le slide suivant</a>
-                </li>
-                <li id="carousel__slide3" class="carousel__slide">
-                    <div class="carousel__snapper"></div>
-                    <a href="#carousel__slide2" class="carousel__prev">Aller vers le slide précédent</a>
-                    <img src="images/electro.jpg" alt="electro" class="style_music">
-                    <div class="content">
-                        <h1 class="titre_presentation">Electro</h1>
-                        <p class="presentation_style_accueil">L'electro (apocope d'electro-funk ou electro-boogie) est un genre de musique électronique directement influencée par l'utilisation d'une boîte à rythmes TR-808 et de quelques samples dérivés du funk.</p>
-                        <article class="cate_groupe_solo">
-                            <div>
-                                <a href="style4.html" target="_blank" class="a_carousel">Carpenter Brut</a>
-                            </div>
-                        </article>
-                    </div>
-                    <a href="#carousel__slide4" class="carousel__next">Aller vers le slide suivant</a>
-                </li>
-                <li id="carousel__slide4" class="carousel__slide">
-                    <div class="carousel__snapper"></div>
-                    <a href="#carousel__slide3" class="carousel__prev">Aller vers le slide précédent</a>
-                    <img src="images/rap.jpg" alt="rap" class="style_music">
-                    <div class="content">
-                        <h1 class="titre_presentation">Rap</h1>
-                        <p class="presentation_style_accueil">Le rap est un mouvement culturel et musical prenant ses racines du hip-hop, ayant émergé au début des années 1970 dans les ghettos aux États-Unis. Le rap se caractérise par sa diction très rythmée et en rimes1, le plus souvent
-                            une succession de couplets séparés par des refrains.</p>
-                        <article class="cate_groupe_solo">
-                            <div>
-                                <a href="style5.html" target="_blank" class="a_carousel">Suicide Boys</a>
-                            </div>
-                        </article>
-                    </div>
-                    <a href="#carousel__slide1" class="carousel__next">Aller vers le slide suivant</a>
-                </li>
-            </ol>
-            <aside class="carousel__navigation">
-                <ol class="carousel__navigation-list">
-                    <li class="carousel__navigation-item">
-                        <a href="#carousel__slide1" class="carousel__navigation-button">Aller au slide 1</a>
+                        <a href="#carousel__slide3" class="carousel__next">Aller vers le slide suivant</a>
                     </li>
-                    <li class="carousel__navigation-item">
-                        <a href="#carousel__slide2" class="carousel__navigation-button">Aller au slide 2</a>
+                    <li id="carousel__slide3" class="carousel__slide">
+                        <div class="carousel__snapper"></div>
+                        <a href="#carousel__slide2" class="carousel__prev">Aller vers le slide précédent</a>
+                        <img src="images/electro.jpg" alt="electro" class="style_music">
+                        <div class="content">
+                            <h1 class="titre_presentation">Electro</h1>
+                            <p class="presentation_style_accueil">L'electro (apocope d'electro-funk ou electro-boogie)
+                                est
+                                un genre de musique électronique directement influencée par l'utilisation d'une boîte à
+                                rythmes TR-808 et de quelques samples dérivés du funk.</p>
+                            <article class="cate_groupe_solo">
+                                <div>
+                                    <a href="style4.html" target="_blank" class="a_carousel">Carpenter Brut</a>
+                                </div>
+                            </article>
+                        </div>
+                        <a href="#carousel__slide4" class="carousel__next">Aller vers le slide suivant</a>
                     </li>
-                    <li class="carousel__navigation-item">
-                        <a href="#carousel__slide3" class="carousel__navigation-button">Aller au slide 3</a>
-                    </li>
-                    <li class="carousel__navigation-item">
-                        <a href="#carousel__slide4" class="carousel__navigation-button">Aller au slide 4</a>
+                    <li id="carousel__slide4" class="carousel__slide">
+                        <div class="carousel__snapper"></div>
+                        <a href="#carousel__slide3" class="carousel__prev">Aller vers le slide précédent</a>
+                        <img src="images/rap.jpg" alt="rap" class="style_music">
+                        <div class="content">
+                            <h1 class="titre_presentation">Rap</h1>
+                            <p class="presentation_style_accueil">Le rap est un mouvement culturel et musical prenant
+                                ses
+                                racines du hip-hop, ayant émergé au début des années 1970 dans les ghettos aux
+                                États-Unis.
+                                Le rap se caractérise par sa diction très rythmée et en rimes1, le plus souvent
+                                une succession de couplets séparés par des refrains.</p>
+                            <article class="cate_groupe_solo">
+                                <div>
+                                    <a href="style5.html" target="_blank" class="a_carousel">Suicide Boys</a>
+                                </div>
+                            </article>
+                        </div>
+                        <a href="#carousel__slide1" class="carousel__next">Aller vers le slide suivant</a>
                     </li>
                 </ol>
-            </aside>
+                <aside class="carousel__navigation">
+                    <ol class="carousel__navigation-list">
+                        <li class="carousel__navigation-item">
+                            <a href="#carousel__slide1" class="carousel__navigation-button">Aller au slide 1</a>
+                        </li>
+                        <li class="carousel__navigation-item">
+                            <a href="#carousel__slide2" class="carousel__navigation-button">Aller au slide 2</a>
+                        </li>
+                        <li class="carousel__navigation-item">
+                            <a href="#carousel__slide3" class="carousel__navigation-button">Aller au slide 3</a>
+                        </li>
+                        <li class="carousel__navigation-item">
+                            <a href="#carousel__slide4" class="carousel__navigation-button">Aller au slide 4</a>
+                        </li>
+                    </ol>
+                </aside>
+            </section>
         </section>
     </main>
 
