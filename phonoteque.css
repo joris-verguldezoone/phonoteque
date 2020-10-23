@@ -103,6 +103,7 @@ nav>ul li:hover .sous {
     background-image: url('images/phonoteque-background.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: center;
 }
 
 .carousel_section_globale {
@@ -658,7 +659,7 @@ h1.titre_presentation {
     margin-top: 2%;
 }
 
-.suite_article_style_txt {
+#suite_article_style_txt1 {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: 3px solid #f1f1f1;
@@ -667,6 +668,22 @@ h1.titre_presentation {
     margin-top: 2%;
     display: flex;
     flex-direction: row;
+}
+
+#suite_article_style_txt2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 3px solid #f1f1f1;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#triche_footer {
+    height: 5vh;
 }
 
 #bloc_presentation_txt {
@@ -695,10 +712,7 @@ h1.titre_presentation {
     margin-bottom: 0;
 }
 
-.suite_article_style_txt {
-    display: flex;
-    flex-direction: row;
-}
+
 
 #presentation_groupe_txt {
     text-align: center;
@@ -713,9 +727,6 @@ h1.titre_presentation {
     margin-left: 15%;
 }
 
-.suite_article_style_txt:nth-child(2) {
-    justify-content: space-around;
-}
 
 .titre_music_txt {
     text-align: center;
@@ -760,8 +771,9 @@ h1.titre_presentation {
     padding-top: 3%;
 }
 
-#titre_ID {
+#h1_style3 {
     font-family: 'font_id_bold.ttf';
+    display: flex;
 }
 
 .photo_id {
@@ -855,10 +867,7 @@ h1_style2 {
     align-items: center;
 }
 
-h1_style3 {
-    display: flex;
-    align-items: center;
-}
+
 
 /* music player */
 /*Style4 Carpenter Brut*/
