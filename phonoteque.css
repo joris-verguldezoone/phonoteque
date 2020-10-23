@@ -1,6 +1,6 @@
 /*      POUR UNE MEILLEURE EXPERIENCE DE NOTRE PHONOTEQUE,
         IL EST PREFERABLE DE LANCER NOTRE PROJET SUR UN SERVEUR
-        (ex: WAMP) AFIN QUE LES VIDEOS YOUTUBE PUISSENT SE LIRE       
+        (ex: WAMP) AFIN QUE LES VIDEOS YOUTUBE PUISSE SE LIRE       
 */
 
 * {
@@ -21,6 +21,11 @@
     width: 45%;
 }
 
+header h1 {
+    display: flex;
+    align-items: center;
+}
+
 #titre_accueil {
     display: flex;
     align-items: center;
@@ -39,6 +44,7 @@
     display: block;
     text-decoration: none;
     color: black;
+    padding: 5px 0px;
     padding: 20px 0px;
 }
 
@@ -319,13 +325,23 @@ h1.titre_presentation {
     text-decoration: none;
 }
 
+
+/*FONT*/
+
 .signature {
     font-family: 'Zenzai-Itacha.ttf';
     font-size: 30px;
 }
 
+@font-face {
+    font-family: 'Mermaid1001';
+    src: url(font/Mermaid1001.ttf);
+}
 
-/*FONT*/
+@font-face {
+    font-family: 'Zenzai-Itacha.ttf';
+    src: url(font/Zenzai-Itacha.ttf);
+}
 
 @font-face {
     font-family: 'reseaux';
@@ -347,16 +363,6 @@ h1.titre_presentation {
     src: url('font/font_id_bold.ttf');
 }
 
-@font-face {
-    font-family: 'Mermaid1001';
-    src: url(font/Mermaid1001.ttf);
-}
-
-@font-face {
-    font-family: 'Zenzai-Itacha.ttf';
-    src: url(font/Zenzai-Itacha.ttf);
-}
-
 .reseaux {
     font-family: 'reseaux';
     font-size: 40px;
@@ -373,11 +379,6 @@ h1.titre_presentation {
     height: 10vh;
     display: flex;
     flex-direction: row;
-}
-
-#h1_style {
-    display: flex;
-    align-items: center;
 }
 
 #main_style_HWU {
@@ -467,14 +468,14 @@ h1.titre_presentation {
     font-family: 'hollywoodundead.otf';
 }
 
-.HWU {
-    text-align: center;
-    margin-top: 30px;
-}
-
 .lien_HWU {
     text-decoration: none;
     color: white;
+}
+
+.HWU {
+    text-align: center;
+    margin-top: 30px;
 }
 
 .lien_HWU:hover {
@@ -496,9 +497,9 @@ h1.titre_presentation {
 /*style1 knocked loose*/
 
 #h1_style1 {
+    font-family: 'Roboto Mono', monospace;
     display: flex;
     align-items: center;
-    font-family: 'Roboto Mono', monospace;
 }
 
 
@@ -622,16 +623,21 @@ h1.titre_presentation {
     flex-direction: row;
 }
 
+#flex_titre_txt {
+    display: flex;
+    flex-direction: column;
+}
+
 #main_style_txt {
     background: url(images/img_txt.jpg);
     min-height: 100vh;
     min-width: 100vh;
     background-attachment: fixed;
+    background-size: cover;
 }
 
-#h1_style2 {
-    display: flex;
-    align-items: center;
+.titre_presentation_txt_header {
+    text-align: center;
 }
 
 .titre_presentation_txt {
@@ -659,20 +665,24 @@ h1.titre_presentation {
     flex-direction: row;
 }
 
+#triche_footer {
+    height: 5vh;
+}
+
 #bloc_presentation_txt {
     display: flex;
     flex-direction: row;
+}
+
+.lien_txt {
+    text-decoration: none;
+    color: white;
 }
 
 .txt_p {
     margin: 4%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: justify;
-}
-
-.lien_txt {
-    text-decoration: none;
-    color: white;
 }
 
 .lien_txt:hover {
@@ -682,11 +692,6 @@ h1.titre_presentation {
 .img_bloc_txt {
     margin: 4px;
     margin-bottom: 0;
-}
-
-.suite_article_style_txt {
-    display: flex;
-    flex-direction: row;
 }
 
 #presentation_groupe_txt {
@@ -749,10 +754,8 @@ h1.titre_presentation {
     padding-top: 3%;
 }
 
-#h1_style3 {
+#titre_ID {
     font-family: 'font_id_bold.ttf';
-    display: flex;
-    align-items: center;
 }
 
 .photo_id {
@@ -792,15 +795,6 @@ h1.titre_presentation {
     justify-content: space-between;
 }
 
-.presentation_groupe_id {
-    font-family: 'font_id_bold.ttf';
-    text-align: center;
-    font-size: 40px;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    color: honeydew;
-}
-
 #lien_id {
     text-decoration: none;
     color: white;
@@ -808,6 +802,15 @@ h1.titre_presentation {
 
 #lien_id:hover {
     color: red;
+}
+
+.presentation_groupe_id {
+    font-family: 'font_id_bold.ttf';
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: honeydew;
 }
 
 .paragraphe_membre_id {
@@ -836,6 +839,22 @@ h1.titre_presentation {
 
 /*fin cindy*/
 
+#h1_style {
+    display: flex;
+    align-items: center;
+}
+
+#h1_style2 {
+    display: flex;
+    align-items: center;
+}
+
+#h1_style3 {
+    display: flex;
+    align-items: center;
+    font-family: 'font_id_bold.ttf';
+}
+
 
 /* music player */
 
@@ -850,10 +869,10 @@ h1.titre_presentation {
 }
 
 #h1_style4 {
-    display: flex;
-    align-items: center;
     font-family: 'carpenter';
     font-size: 40px;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -934,6 +953,7 @@ h1.titre_presentation {
 }
 
 #h1_style5 {
+    font-family: 'Playfair Display SC', serif;
     display: flex;
     align-items: center;
 }
@@ -957,6 +977,13 @@ h1.titre_presentation {
     width: 80%;
     display: flex;
     flex-direction: row;
+    padding: 50px;
+    justify-content: space-around;
+}
+
+.a_style5_decoration_none {
+    text-decoration: none;
+    color: blue;
 }
 
 .p_suicide_boys {
@@ -966,9 +993,18 @@ h1.titre_presentation {
     background-color: whitesmoke;
     border-radius: 1em;
     box-shadow: 5px 5px 5px black;
+    font-family: 'Playfair Display SC', serif;
 }
 
-.bande_horizontale {
+#bande_horizontale1 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 150px;
+    background-color: #872020;
+}
+
+#bande_horizontale2 {
     margin-top: 2%;
     margin-bottom: 2%;
     width: 100%;
@@ -1022,7 +1058,9 @@ h1.titre_presentation {
     font-size: 22px;
     width: 40%;
     border-radius: 1em;
+    height: 80%;
     box-shadow: 5px 5px 5px black;
+    font-family: 'Playfair Display SC', serif;
 }
 
 .audioplayer_suicide {
@@ -1032,6 +1070,7 @@ h1.titre_presentation {
 .p_description_suicide {
     color: darkcyan;
     font-weight: bold;
+    font-family: 'Playfair Display SC', serif;
 }
 
 .article_bas_suicide {
@@ -1045,6 +1084,7 @@ h1.titre_presentation {
     text-align: center;
     color: #CCC;
     font-weight: bold;
+    font-family: 'Playfair Display SC', serif;
 }
 
 
@@ -1075,6 +1115,7 @@ h1.titre_presentation {
 }
 
 #h1_style6 {
+    font-family: 'Manuale', serif;
     display: flex;
     align-items: center;
 }
@@ -1084,9 +1125,30 @@ h1.titre_presentation {
 
 #main_style6 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #171f00;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+#section_style6_contenu_principal {
+    display: flex;
+    flex-direction: row;
+}
+
+#description_style6_punish {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.p_punish_description {
+    color: black;
+    padding: 20px;
+    background-color: #003800;
+    margin: 20px;
+    border-radius: 1em;
+    width: 30%;
+    font-family: 'Habibi', serif;
 }
 
 .img_dimension_princiale_style6 {
@@ -1101,7 +1163,7 @@ h1.titre_presentation {
 }
 
 #aside_style6_right {
-    width: 9%;
+    width: 7%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
